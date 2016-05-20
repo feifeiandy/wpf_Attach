@@ -5,12 +5,15 @@
         Title="MainWindow" Height="350"  Width="525" Loaded="Window_Loaded">
     <Window.Resources>
         <ResourceDictionary Source="pack://application:,,,/WpfApplication2;component/MyTextBox.xaml">
-           
+
         </ResourceDictionary>
     </Window.Resources>
     <Grid RenderTransformOrigin="0.338,0.287">
-        <TextBox x:Name="txt1" Width="150" Height="30"  local:TextBoxHelper.MyTxt="hello word crrrrrrr" Margin="232,73,135,217"></TextBox>
-        <TextBox  x:Name="txt2" Width="150" Height="30"  Margin="51,73,316,217" Text="{ Binding Path=MyTxt,ElementName=txt1}"></TextBox>
-        <Button Width="150"  Height="30"   Margin="88,143,279,147" Click="Button_Click"></Button>
+        <TextBox x:Name="txt1" Height="30"  local:TextBoxHelper.MyTxt="hello word 1" Margin="51,72,312,218"/>
+        <TextBox x:Name="txt2" Width="150" Height="30"  local:TextBoxHelper.MyTxt="hello word 2" Margin="263,21,104,269"></TextBox>
+        
+        <!--这里绑定到附加属性要加括号-->
+        <TextBox  x:Name="txt3" Height="30"   Margin="51,21,312,269" Text="{Binding Path=(local:TextBoxHelper.MyTxt),ElementName=txt1}"/>
+        <Button Width="150"  Height="30"   Margin="51,141,316,149" Click="Button_Click"></Button>
     </Grid>
 </Window>

@@ -29,12 +29,13 @@ namespace WpfApplication2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(TextBoxHelper.GetMyTxt(this.txt1));
+            TextBoxHelper.SetMyTxt(this.txt1, "www.bai.com");
+            //MessageBox.Show(TextBoxHelper.GetMyTxt(this.txt1));
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //TextBoxHelper.SetMyTxt(this.txt1, "www.bai.com");
+           
         }
     }
 }

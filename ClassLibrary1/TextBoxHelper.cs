@@ -36,7 +36,5 @@ namespace ClassLibrary1
                 element.Text = e.NewValue.ToString();
             }
         }
-
-               
     }
 }
