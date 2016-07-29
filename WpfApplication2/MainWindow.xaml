@@ -4,16 +4,13 @@
         xmlns:local="clr-namespace:ClassLibrary1;assembly=ClassLibrary1"
         Title="MainWindow" Height="350"  Width="525" Loaded="Window_Loaded">
     <Window.Resources>
-        <ResourceDictionary Source="pack://application:,,,/WpfApplication2;component/MyTextBox.xaml">
-
-        </ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/WpfApplication2;component/MyTextBox.xaml"/>
     </Window.Resources>
     <Grid RenderTransformOrigin="0.338,0.287">
-        <TextBox x:Name="txt1" Height="30"  local:TextBoxHelper.MyTxt="hello word 1" Margin="51,72,312,218"/>
+        <TextBox Style="{ StaticResource ResourceKey=mt}" x:Name="txt1" Height="30"  local:TextBoxHelper.MyTxt="hello word 1" Margin="63,21,300,269"/>
         <TextBox x:Name="txt2" Width="150" Height="30"  local:TextBoxHelper.MyTxt="hello word 2" Margin="263,21,104,269"></TextBox>
-        
         <!--这里绑定到附加属性要加括号-->
-        <TextBox  x:Name="txt3" Height="30"   Margin="51,21,312,269" Text="{Binding Path=(local:TextBoxHelper.MyTxt),ElementName=txt1}"/>
-        <Button Width="150"  Height="30"   Margin="51,141,316,149" Click="Button_Click"></Button>
+        <TextBox Background="Yellow"  x:Name="txt3" Height="30" Margin="63,80,300,210" Text="{Binding Path=(local:TextBoxHelper.MyTxt),ElementName=txt1,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"/>
+        <Button Width="150"  Height="30" Margin="63,141,304,149" Click="Button_Click"></Button>
     </Grid>
 </Window>

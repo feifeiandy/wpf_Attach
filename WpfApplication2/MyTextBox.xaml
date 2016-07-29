@@ -6,11 +6,16 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
-                        <TextBlock Text="{TemplateBinding local:TextBoxHelper.MyTxt}"></TextBlock>
+                        <!--此处可以不使用local:TextBoxHelper.MyTxt，使用了只和资源样式有关和附加属性无关-->
+                        <TextBox Background="Green" Text="{TemplateBinding local:TextBoxHelper.MyTxt}"></TextBox>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style.Setters>
     </Style>
-    
 </ResourceDictionary>
+    
+    
+    
+    
+    
